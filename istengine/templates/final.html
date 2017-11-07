@@ -1,0 +1,162 @@
+{% extends "layout.html" %}<html><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+{% block content %}
+<form action="{{ url_for('tab6') }}" method=POST><h3>Range <input type='text' size='5' name='vehicle' value=''>
+ &emsp; to &emsp;<input type='text' size='5' name='vehicle' value=''>
+<input type='submit' value='Submit'>
+</form>
+</h3><br><div class="container">
+<div class="row">
+<table border="1" class="dataframe container">
+  <thead>
+    <tr style="text-align: center;">
+      <th>row.id</th>
+      <th>smiles</th>
+      <th>mean</th>
+      <th>ci.lower</th>
+      <th>ci.upper</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  1</td>
+      <td> C/C3=C/C(=O)N2CC(=O)N(C)C=1C=CC([Cl])=CC=1[C@@...</td>
+      <td> 49.937124</td>
+      <td> 40.420000</td>
+      <td> 60.647681</td>
+    </tr>
+    <tr>
+      <td>  2</td>
+      <td> CC(=O)NC[C@@]3([H])CN(/C1=C/C([F])=C(C=C1)N2CC...</td>
+      <td> 64.220498</td>
+      <td> 44.350204</td>
+      <td> 83.110294</td>
+    </tr>
+    <tr>
+      <td>  3</td>
+      <td> CN1CCC[C@]([H])(CC1)N4N[C@@]([H])(C/C2=C/C=C(/...</td>
+      <td> 45.497486</td>
+      <td> 38.135615</td>
+      <td> 55.720000</td>
+    </tr>
+    <tr>
+      <td>  4</td>
+      <td>     COC(=O)NC=2NC1=CC(=CC=C1N=2)C(=O)C=3C=CC=CC=3</td>
+      <td> 65.358194</td>
+      <td> 54.857838</td>
+      <td> 77.734939</td>
+    </tr>
+    <tr>
+      <td>  5</td>
+      <td>          CO/C1=C/C=C/C=C1/OC[C@@](O)([H])COC(N)=O</td>
+      <td> 62.340102</td>
+      <td> 53.246829</td>
+      <td> 72.120000</td>
+    </tr>
+    <tr>
+      <td>  6</td>
+      <td> CCN(CC)CCOC(=O)[C@]([H])(C/C2=C/C1=CC=CC=C1C=C...</td>
+      <td> 55.111420</td>
+      <td> 38.128000</td>
+      <td> 72.863420</td>
+    </tr>
+    <tr>
+      <td>  7</td>
+      <td>                                 CNCC/C1=C/C=CC=N1</td>
+      <td> 60.721729</td>
+      <td> 49.367882</td>
+      <td> 69.020000</td>
+    </tr>
+    <tr>
+      <td>  8</td>
+      <td> CC2(C)NC(=O)N(/C1=C/C(=C(C=C1)[N+]([O-])=O)C([...</td>
+      <td> 67.150313</td>
+      <td> 52.780000</td>
+      <td> 91.681253</td>
+    </tr>
+    <tr>
+      <td>  9</td>
+      <td> C#C[C@@]4(O)CC[C@]3([H])[C@]2([H])CCC1=CC(=O)C...</td>
+      <td> 45.921546</td>
+      <td> 30.616278</td>
+      <td> 59.720000</td>
+    </tr>
+    <tr>
+      <td> 10</td>
+      <td> O=C2NC1=CC=CC=C1N2CCCN3CCN(CC3)C([H])(C=4C=CC=...</td>
+      <td> 47.681438</td>
+      <td> 34.280000</td>
+      <td> 65.281438</td>
+    </tr>
+    <tr>
+      <td> 11</td>
+      <td> CC(C)(C)NC[C@@](O)([H])CO/C1=C/C=C/C=C1/[C@@]2...</td>
+      <td> 42.010066</td>
+      <td> 37.533864</td>
+      <td> 46.580000</td>
+    </tr>
+    <tr>
+      <td> 12</td>
+      <td>                CCC2(C=1C=CC=CC=1)C(=O)NC(=O)NC2=O</td>
+      <td> 55.916374</td>
+      <td> 47.807117</td>
+      <td> 61.829257</td>
+    </tr>
+    <tr>
+      <td> 13</td>
+      <td>  O[C@@](CCN1CCCC1)(C=2C=CC=CC=2)[C@@]3([H])CCCCC3</td>
+      <td> 60.470320</td>
+      <td> 40.694737</td>
+      <td> 79.376636</td>
+    </tr>
+    <tr>
+      <td> 14</td>
+      <td> CCCN3C[C@]([H])(C[C@]2([H])CC1=C(C=C/C=C1/O)C[...</td>
+      <td> 47.422922</td>
+      <td> 33.166723</td>
+      <td> 56.704796</td>
+    </tr>
+    <tr>
+      <td> 15</td>
+      <td> C/C1=C/N(C(=O)N=C1N)[C@@]2([H])C=C[C@]([H])(CO)O2</td>
+      <td> 72.020672</td>
+      <td> 57.117838</td>
+      <td> 81.224849</td>
+    </tr>
+    <tr>
+      <td> 16</td>
+      <td> C[C@@]([H])(C/C1=C/C=C(/OC)C(=C1)[S](N)(=O)=O)...</td>
+      <td> 70.120860</td>
+      <td> 61.540000</td>
+      <td> 78.480763</td>
+    </tr>
+    <tr>
+      <td> 17</td>
+      <td> CC(C)([H])C[C@]3([H])CN2CCC=1/C=C(/OC)C(=CC=1[...</td>
+      <td> 62.526042</td>
+      <td> 45.933578</td>
+      <td> 82.580000</td>
+    </tr>
+    <tr>
+      <td> 18</td>
+      <td>   O=C1CC4(CC(=O)N1CCCCN2CCN(CC2)C3=NC=CC=N3)CCCC4</td>
+      <td> 59.531307</td>
+      <td> 50.894312</td>
+      <td> 68.690916</td>
+    </tr>
+    <tr>
+      <td> 19</td>
+      <td>  O=C2N1C=CC=CC1=NN2CCCN3CCN(CC3)C4=CC=CC([Cl])=C4</td>
+      <td> 52.527605</td>
+      <td> 35.506122</td>
+      <td> 66.621482</td>
+    </tr>
+    <tr>
+      <td> 20</td>
+      <td> CC(=O)N(CC)C=1C=C(C=CC=1)C3=CC=N/C2=C(\C#N)C=NN23</td>
+      <td> 65.309595</td>
+      <td> 52.234312</td>
+      <td> 73.140000</td>
+    </tr>
+  </tbody>
+</table>{% endblock %}</body></html>

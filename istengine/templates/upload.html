@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    
+    {{ html|safe }}
+    
+    <form action="{{ url_for('uploadtraindata') }}" method=post enctype=multipart/form-data>
+    <h4>Upload files for training </h4>    
+    <p><input type=file name=file1>
+    or
+    <h4> Choose properties from below:</h4> 
+    <input type="radio" name="vehicle" value="11">	T_HBT_I<br>
+    
+    <input type="radio" name="vehicle" value="12">	T_hERG_I<br>
+    
+    <input type="radio" name="vehicle" value="13">	T_hERG_II<br>
+
+    <input type=submit value=Upload>
+    </form>
+
+
+
+
+{% endblock %}
+

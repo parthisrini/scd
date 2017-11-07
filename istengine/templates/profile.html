@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- <div class="jumbo"> -->
+   <br><br>    
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    
+    {% for message in messages %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+   
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+
+    <form action="{{ url_for('navigate') }}" method=post enctype=multipart/form-data>
+
+    <h4>
+    <span class="help-block">1. Use <a href="{{ url_for('uploadtrain') }}"> Select ADMET Properties</a> to upload training set with response
+    </span>    
+    </h4>    
+    <br>
+
+
+
+     <h4>
+    <span class="help-block">2. Use <a href="{{ url_for('fimp') }}"> Descriptor Importance</a> to see descriptor importance
+    </span>    
+    </h4>     
+    <br>
+    
+    <h4>
+    <span class="help-block">3. Use <a href="{{ url_for('validation') }}" >Validation </a> to generate cross validation results on training set
+    </span>    
+    </h4>    
+    <br>
+
+    <h4>
+    <span class="help-block">4. Use <a href="{{ url_for('uploadtest') }}"> Upload Compounds to Test </a> to upload smiles to predict response
+    </span>    
+    </h4>    
+    <br>
+
+    <h4>
+    <span class="help-block">5. Use <a href="{{ url_for('predict') }}" > Predictions </a> to predict the response on the testing set
+    </span>    
+    </h4>    
+    <br>
+    <br>
+    
+    <button type="submit" name="submit" value="uploadtrain" class="btn btn-success btn-lg pull-right">Next</button>
+    </form>
+{% endblock %}

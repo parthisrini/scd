@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>mentalized.net</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Neucha|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/all.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="/stylesheets/zenburn.css" rel="stylesheet" type="text/css" />
+
+    <meta name="robots" content="noindex,follow" />
+    <meta name="author" content="Jakob Skjerning" />
+    <meta name="description" content="The virtual home of Jakob Skjerning" />
+    <meta name="readability-verification" content="ARcrm7nvAgDuPAdXFG9AgwxgE9AweU3WrbpaAbv3" />
+
+    <link rel="author" href="https://plus.google.com/+JakobSkjerning?rel=author" />
+
+    <!-- OpenID -->
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://jakob.skjerning.myopenid.com/" />
+    <meta http-equiv="X-XRDS-Location" content="http://jakob.skjerning.myopenid.com/xrds" />
+
+    <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud?source=profiles" />
+    <link rel="openid2.local_id" href="https://plus.google.com/101947935873921831191" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="alternate" type="application/rss+xml" title="Full entries" href="http://mentalized.net/journal/entries.xml" />
+
+    <link rel="Start" title="Home" href="http://mentalized.net/journal/" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div id="branding">
+          <a href="/" title="mentalized.net - the virtual home of Jakob Skjerning">
+            mentalized.net
+          </a>
+        </div>
+      </header>
+
+      <article>
+  <h1>
+    <a href="/journal/2014/09/16/viewport-relative-scalable-text" title="Read 'Viewport-relative, scalable text'">
+      Viewport-relative, scalable text
+    </a>
+  </h1>
+
+  <aside>
+    <p>
+      Posted
+      <span class="timestamp">16 September 2014</span>
+      in
+      webdesign and mentalized.net
+    </p>
+  </aside>
+
+  <p>When creating fluid designs, <a href="http://www.simonstratford.com/ideal-line-length/">controlling the line length</a> is a challenge. You don&#39;t want your lines to expand indefinitely, making them unreadable, even if the layout can expand indefinitely. This article details how I solved the problem on <a href="/">mentalized.net</a>.</p>
+
+
+  <div class="more">
+    <a href="/journal/2014/09/16/viewport-relative-scalable-text" title="Read 'Viewport-relative, scalable text'">Read the entire entry</a>
+  </div>
+</article>
+
+<section class="entries double columns">
+  <section class="recent column">
+    <h1>Recent entries</h1>
+
+    <ul>
+      
+        <li>
+          <a href="/journal/2014/09/16/viewport-relative-scalable-text" title="Read 'Viewport-relative, scalable text'">
+            Viewport-relative, scalable text
+          </a>
+        </li>
+      
+        <li>
+          <a href="/journal/2014/09/08/validate-without-a-model" title="Read 'ActiveModel validations without a model'">
+            ActiveModel validations without a model
+          </a>
+        </li>
+      
+        <li>
+          <a href="/journal/2014/09/01/commit-messages-deserve-care-and-tenderness" title="Read 'Commit messages deserve care and tenderness'">
+            Commit messages deserve care and tenderness
+          </a>
+        </li>
+      
+        <li>
+          <a href="/journal/2014/08/25/alphanumerically-sorted-code" title="Read 'I like my code alphabetically'">
+            I like my code alphabetically
+          </a>
+        </li>
+      
+        <li>
+          <a href="/journal/2014/08/07/ember-on-rails-05" title="Read 'Ember on Rails: Nested views'">
+            Ember on Rails: Nested views
+          </a>
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="popular column">
+    <h1>Popular entries</h1>
+
+    <ul>
+      <li><a href="/journal/2010/03/08/5-ways-to-run-commands-from-ruby/">5 ways to run commands from Ruby</a></li>
+      <li><a href="/journal/2011/06/27/pepper-a-redmine-theme/">Pepper - A Redmine theme</a></li>
+      <li><a href="/journal/2006/01/24/no-such-file-to-load-mkmf/">no such file to load &#8212; mkmf</a></li>
+      <li><a href="/journal/2009/08/03/redmine-plugin-github-hook/">Redmine plugin: Github Hook</a></li>
+      <li><a href="/journal/2006/02/06/hello-ruby-on-rails-world/">Hello Ruby on Rails World</a></li>
+    </ul>
+  </section>
+</section>
+
+<section class="social">
+  <ul>
+    <li class="twitter"><a rel="me" href="http://twitter.com/mentalizer" title="Jakob on Twitter">Twitter</a></li>
+    <li class="github"><a rel="me" href="http://github.com/koppen" title="Jakob on Github">Github</a></li>
+    <li class="working_with_rails"><a rel="me" href="http://workingwithrails.com/person/4796-jakob-skjerning" title="Jakob on Working With Rails">WWR</a></li>
+    <li class="linked_in"><a rel="me" href="http://www.linkedin.com/in/jakobskjerning" title="Jakob on LinkedIn">LinkedIn</a></li>
+    </ul>
+  </ul>
+</section>
+
+
+      <footer class="quad columns">
+        <ul class="column">
+          <li><a href="/" title="mentalized.net">mentalized.net</a></li>
+          <li>&copy;2003-2014 <a href="http://mentalized.net/about/" title="About Jakob">Jakob Skjerning</a></li>
+          <li><a href="/journal/entries.xml" title="RSS feed" class="rss">Subscribe to feed</a></li>
+        </ul>
+
+        <ul class="column">
+          <li><a href="http://twitter.com/mentalizer" title="Jakob is on Twitter - you should totally follow him">@mentalizer</a></li>
+          <li><a href="http://substancelab.com" title="Freelance Ruby on Rails application development">Hire Jakob</a></li>
+        </ul>
+
+        <ul class="column">
+          <li><a href="http://substancelab.com" title="Freelance Ruby on Rails application development">Substance Lab</a></li>
+          <li><a href="http://objectpush.com" title="Receive emails from your customers in your web application">Objectpush</a></li>
+          <li><a href="http://flowtodo.com" title="Stay effective and productive">FlowToDo</a></li>
+        </ul>
+
+        <ul class="column">
+          <li><a href="http://progresswars.com" title="Filling progress bars has never been this much fun before">Progress Wars</a></li>
+          <li><a href="http://mentalized.net/activity-indicators" title="Totally free animated gif spinners to show them that your site is doing something">Activity Indicators</a></li>
+          <li><a href="http://hvadbrugespengenetil.dk" title="See what your tax payer money is used for - if you pay taxes in Denmark">Hvad Bruges Pengene Til</a></li>
+        </ul>
+      </footer>
+
+    </div>
+
+    <script>
+      // Fix issue with Chrome and vw sizing.
+      // See http://css-tricks.com/viewport-sized-typography/
+      window.onresize = function(event) {
+        if (document.getElementByClassname) {
+          var container = document.getElementsByClassName('.container')[0];
+          if (container) {
+            container.style.zIndex = 1;
+          };
+        };
+      };
+
+      // Google Analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-54854-1']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+  </body>
+
+</html>

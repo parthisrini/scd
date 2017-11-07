@@ -1,0 +1,75 @@
+{% extends "layout.html" %} 
+{% block content %}
+  <!-- <div class="jumbo"> -->
+   <br><br>    
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    
+    {% for message in messages %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+   
+  {% endif %}
+{% endwith %}
+{% block body %}
+{% endblock %}
+
+
+
+    <form action="{{ url_for('home') }}" method=post enctype=multipart/form-data>
+
+
+    <center>
+    <h1> <img src="{{ url_for('static', filename='img/logo.png') }}"> </h1> 
+    </center>
+    <br>
+    <br>
+    <p class="text-left">
+    Welcome to Vingyani Cloud Analytics Platform! Our tool makes it simple, easy and fast to extract the insights from your data. Our inspiration has and will always be the advancement of life sciences. 
+    We are excited to compliment and enhance your research by making the most sophisticated data analytics available at the touch of a button.
+    Remember, even the most advanced algorithms need a critical mass of data in order to provide reliable and accurate predictions – especially in a field as vast and nuanced as life sciences. However, transparency is one of our guiding principles. For each analysis we provide our best possible prediction and our confidence in that result.
+    </p>    
+    <br>
+    <center> 
+    <h3 class="text-left"> <span class="glyphicon glyphicon-lock"></span> Before we get started: Your data is safe with Vingyani! </h3></center>
+    <p class="text-left">
+    At Vingyani, the security of your data is our highest priority. We leverage the security measures provided by the Amazon Web Services (AWS) platform so you can trust us to safeguard your data.
+    The AWS cloud infrastructure has been designed and managed in alignment with regulations, standards, and best-practices. Also click on the link for more info: <a href=http://aws.amazon.com/security/ target="new">Amazon Security Documentation</a>
+
+    </p>
+    
+    <p class="text-left">
+    <h3 class="text-left"> <span class="glyphicon glyphicon-hand-right"></span> Additional details</h3>
+    <br>
+    <span class="glyphicon glyphicon-info-sign"> </span> Vingyani does not save any of your data locally 
+    <br>
+    <span class="glyphicon glyphicon-info-sign"> </span> Vingyani Prediction Platform erases your data when you logout (don’t worry, our engine is fast enough to make each new session a breeze)
+    <br>   
+    <span class="glyphicon glyphicon-info-sign"> </span> Vingyani will not share your data with any other parties
+    <br>
+    <span class="glyphicon glyphicon-info-sign"> </span> Vingyani pledges that any and all changes in our security and privacy policy will be communicated clearly and in a timely fashion
+    <br>
+    </p>
+
+    <p class="text-left">
+    <span class="glyphicon glyphicon-warning-sign"> </span> Vingyani will not be held liable for a breach of data that occurs on the AWS platform
+    </p>
+
+    <button type="submit" name="submit" value="uploadtrain" class="btn btn-success btn-lg pull-right"> <span class="glyphicon glyphicon-thumbs-up"></span> Continue</button>
+
+
+
+
+
+    <br>
+    <br>
+    <p class="text-left">
+    <h3 class="text-left"> <span class="glyphicon glyphicon-question-sign"> </span> Questions </h3>
+    If you have questions about our security and privacy policy please email us at parthi@vingyani.com
+    </p>
+    <br>
+
+
+    </form>
+{% endblock %}

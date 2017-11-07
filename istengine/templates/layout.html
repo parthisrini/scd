@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> 
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}"> 
+<!-- Optional: Include the jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--  
+<script>
+function loadImage() {
+document.getElementById("processing").style.visibility = "hidden";
+}
+</script>
+-->
+
+<script type="text/javascript">
+      $(document).ready(function(){
+      $(window).load(function(){
+      $('#loading').fadeOut();
+      });
+      });
+</script>
+
+
+<script type="text/javascript">
+      $(document).ready(function(){
+      $(window).load(function(){
+      $('#top-nav').fadeIn();
+      });
+      });
+</script>
+
+
+
+<script type="text/javascript">
+      $(document).ready(function(){
+      $(window).load(function(){
+      $('#bottom-nav').fadeIn();
+      });
+      });
+</script>
+
+
+</head>
+
+
+
+
+
+<header>
+        <ul class="nav nav-tabs" data-tabs="tabs">
+          {% if 'email' in session %}  
+          <li><a href="{{ url_for('home') }}">HowTo</a></li>
+          {% endif %}  
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          {% if 'email' in session %}
+          <li><a href="{{ url_for('profile') }}">Profile</a></li>
+          <li><a href="{{ url_for('signout') }}">Sign Out</a></li>      
+          {% endif %}
+        </ul>
+</header>
+
+{% if 'uid' in session %}
+
+
+
+<center>
+
+<h1> <img src="{{ url_for('static', filename='img/logo.png') }}"> Analytics Dashboard </h1> 
+<!--<h1> <img src=http://vingyani.com/images/logo.png> Analytics Dashboard </h1> -->
+</center>
+<br>
+
+
+
+<div class="span6">
+
+
+    <ul id="tabs" class="nav nav-tabs nav-justified" role="tablist">
+    
+        <li><a href="{{ url_for('uploadtrain') }}" role="tab" id="mylink"> 1. Select ADMET Properties </a></li>
+
+        <li><a href="{{ url_for('fimp') }}" role="tab" id="mylink"> 2. Descriptor Importance</a></li>
+
+        <li><a href="{{ url_for('validation') }}"  role="tab" id="mylink">3. Validation </a></li>
+
+        <li><a href="{{ url_for('uploadtest') }}"  role="tab" id="mylink"> 4. Upload Compounds to Test</a></li>
+
+        <li><a href="{{ url_for('predict') }}"   role="tab" id="mylink">  5. Predictions  </a></li>
+
+    </ul>
+
+{% endif %}
+
+
+<div class="container"> 
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="alert alert-info" role="alert">
+     <ul class=flashes> 
+    {% for category, message in messages %}
+         <span class="glyphicon glyphicon-info-sign"> </span> {{ message }}  <br> 
+    {% endfor %}
+      </ul> 
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+
+<center>
+<div id="loading">
+    <img src="{{ url_for('static', filename='img/spiffygif.gif') }}" alt="Loading.." />
+</div>
+</center>
+
+
+      {% block content %}
+
+      {% endblock %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="alert alert-info" role="alert">
+     <ul class=flashes> 
+    {% for category, message in messages %}
+         <span class="glyphicon glyphicon-info-sign"> </span> {{ message }}  <br> 
+    {% endfor %}
+      </ul> 
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+</div> 
+
+
+
+
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script> 
+
+
+
+
+</html>

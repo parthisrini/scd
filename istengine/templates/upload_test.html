@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   <form action="{{ url_for('uploadtestdata') }}" method=post enctype=multipart/form-data>
+ 
+    {% if html != '' %}
+    <br>
+    <br>
+    <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg ">Prev</button>
+    <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button>
+    <br>
+    <br>
+    {% endif %}  
+
+  
+
+
+    {% if html != '' %}
+    {{ html|safe }}
+    {% endif %}
+  
+    </br>
+    </br>
+    <h4>Upload files for testing </h4>    
+    <p><input type=file name=file2>
+    </br>
+    </br>
+
+    {% if html != '' %}
+    <button type="submit" name="submit" value="reupload" class="btn btn-primary btn-lg">Upload</button>
+    <button type="submit" name="submit" value="remove" class="btn btn-danger btn-lg">Remove</button>
+    <br>
+    <br>
+    <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg ">Prev</button>
+    <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button>
+    <br>
+    <br>
+    {% else %}
+    <button type="submit" name="submit" value="upload" class="btn btn-primary btn-lg">Upload</button>
+    <br>
+    <br>
+    <br>
+    <!-- <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg">Prev</button> -->
+     <!-- <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button>-->
+    <br>
+    <br>
+    {% endif %}
+    </form>
+
+{% endblock %}
+

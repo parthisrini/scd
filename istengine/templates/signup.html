@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Sign up</h2>
+
+  {% for message in form.firstname.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.lastname.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.email.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.phone.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.password.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  <form action="{{ url_for('signup') }}" method=post>
+    {{ form.hidden_tag() }}
+    
+    {{ form.firstname.label }}
+    {{ form.firstname }}
+    
+    {{ form.lastname.label }}
+    {{ form.lastname }}
+
+    {{ form.companyname.label }}
+    {{ form.companyname }}
+    
+    {{ form.email.label }}
+    {{ form.email }}
+   
+    {{ form.phone.label }}
+    {{ form.phone }}
+    
+    {{ form.password.label }}
+    {{ form.password }}<br>
+    
+    {{ form.submit(class="btn btn-primary") }}
+  </form>
+    
+{% endblock %}

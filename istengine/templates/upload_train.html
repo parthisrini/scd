@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+
+
+
+   <form action="{{ url_for('uploadtraindata') }}" method=post enctype=multipart/form-data>
+    {% if html != '' %}
+    <br>
+    <br>
+     <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg pull-left">Prev</button> 
+     <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button>  
+    <br>
+    <br>
+    {% else %}
+    <br>
+    <br>
+    <!-- <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg pull-left">Prev</button> -->
+    <!-- <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button> -->
+    <br>
+    <br>
+    {% endif %}
+
+ 
+    {% if html != '' %}
+    {{ html|safe }}
+    {% endif %}
+    <table class=" table-condensed">
+    <tr>
+    <th> <h4>Upload files for training</h4></th>
+    <th>  <h4>or</h4>  </th>
+    <th> <p> <h4> Choose any of the following properties: </h4> </th>
+    </tr>
+
+    <tr>
+    <th><input type=file name=file1></th>
+    <th></th>
+    <th></th> <!-- <input type="checkbox" name="prebuilt" value="A_Caco2_I"> <b> Absorption: Caco-2 Permeability (A_Caco2_I) </b></th> -->
+    </tr>
+    
+    {% if pre_html != '' %}
+    {{ pre_html|safe }}
+    {% endif %}
+<!--
+    <tr>
+    <th></th>
+    <th></th>
+    <th><input type="checkbox" name="prebuilt" value="A_HIA_I"> <b> Absorption: Human Intestinal Absorption  (A_HIA_I) </b>
+    </th>
+    </tr>
+
+    <tr>
+    <th></th>
+    <th></th>
+    <th><input type="checkbox" name="prebuilt" value="R_A_CACO2_I"> <b> R_A_CACO2_I </b>
+    </th>
+    </tr>
+
+
+    <tr>
+    <th></th>
+    <th></th>
+    <th><input type="checkbox" name="prebuilt" value="T_HERG_I"> <b> Toxicity: Human Ether-a-go-go-Related Gene Inhibition (T_HERG_I) </b>
+    </th>
+    </tr>
+-->
+
+
+
+    </table>
+
+
+
+    </br>
+    </br>
+     
+    {% if html != '' %}
+    <button type="submit" name="submit" value="reupload" class="btn btn-primary btn-lg ">Upload</button>
+    <button type="submit" name="submit" value="remove" class="btn btn-danger btn-lg ">Remove</button>
+    <br>
+    <br>
+    <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg pull-left">Prev</button>
+    <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button>
+    <br>
+    <br>
+    {% else %}
+    <button type="submit" name="submit" value="upload" class="btn btn-primary btn-lg">Upload</button>
+    <br>
+    <br>
+    <!-- <button type="submit" name="submit" value="prev" class="btn btn-warning btn-lg pull-left">Prev</button> -->
+    <!-- <button type="submit" name="submit" value="next" class="btn btn-success btn-lg pull-right">Next</button> -->
+    <br>
+    <br>
+    {% endif %}
+    </br>
+    </br>
+    </form>
+
+    <!--
+    {{ html|safe }}
+    <h4>Upload files for training </h4>
+    <form action="{{ url_for('uploadtraindata') }}" method=post enctype=multipart/form-data>
+      <p><input type=file name="file1">
+         <input type=submit value=Upload>
+    </form>
+    -->
+{% endblock %}
+

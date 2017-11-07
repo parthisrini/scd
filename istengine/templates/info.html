@@ -1,0 +1,9 @@
+{% extends "layout.html" %}<html>{% block content %}
+<div class="container">
+<div class="row">
+<table style="width:800px"><tr><td><h4>First Name:</h4></td><td><h4>{{ data['firstname'] }}</h4></td></tr><br>
+<tr><td><h4>Last Name:</h4></td><td><h4>{{ data['lastname'] }}</h4></td></tr><br>
+<tr><td><h4>Company Name:</h4></td><td><h4>{{ data['companyname'] }}</h4></td></tr><br>
+<tr><td><h4>Email:</h4></td><td><h4> {{ data['email'] }}</h4></td></tr><br>
+<tr><td><h4>Phone:</h4></td><td><h4> {{ data['phone'] }}</h4></td></tr><br>
+</div></div>{% endblock %}</html>
